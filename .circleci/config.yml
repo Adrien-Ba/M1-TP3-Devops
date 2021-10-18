@@ -110,8 +110,8 @@ jobs:
           command: git push https://heroku:19f982bf-2f59-4708-a7f4-3b471dab997e@git.heroku.com/ancient-wildwood-44370.git HEAD:main
       - run:
           name: Smoke Test
-          command: HTTPCODE=`curl -s -o /dev/null -w "%{http_code}" https://$HEROKU_APP_NAME.herokuapp.com/`
-                    if [ "$HTTPCODE" -ne 200 ];then
+          command: HTTPCODE=`curl -s -o /dev/null -w "%{http_code}" https://ancient-wildwood-44370.herokuapp.com/`
+                    if [ "$HTTPCODE" -ne 200 ]; then
                       echo "heroku app not responding, failing deploy"
                       exit 1
                     fi 
