@@ -107,7 +107,7 @@ jobs:
       - checkout
       - run:
           name: Heroku Deploy
-          command: git push https://heroku:19f982bf-2f59-4708-a7f4-3b471dab997e@git.heroku.com/ancient-wildwood-44370.git HEAD:main
+          command: git push https://heroku:$HEROKU_KEY@git.heroku.com/ancient-wildwood-44370.git HEAD:main
       - run:
           name: Smoke Test
           command: | 
