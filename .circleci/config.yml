@@ -49,7 +49,7 @@ jobs:
           at: /tmp
       - run:
           name: Deploy app
-          command: echo todo && false
+          command: yarn netlify deploy --prod --dir=/tmp/server-doc
   back-test-unit:
     <<: *shared-config
     steps:
